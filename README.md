@@ -1,8 +1,2 @@
-# React-boilerplate
-React with Sass and Webpack boilerplate, made for node 6
-
-### Instructions
-```
-npm install
-http://localhost:8082
-```
+# React in github pages
+This is my personal website made in React and hosted on github.io / skarpn.es
