@@ -11,9 +11,10 @@ const user = {
 class Home extends Component{
   render() {
     return (
-      <div>
+      <div id="home">
         <h1>{formatName(user)}!</h1>
         <h2>(With SCSS!)</h2>
+        <p>Maybe some SCSS at least</p>
       </div>
     )
   }
