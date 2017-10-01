@@ -1,6 +1,14 @@
 body {
   background-color: white;
-  color: #ffffff;
+  color: black;
+}
+
+#root {
   display: flex;
   justify-content: center;
+}
+
+#home {
+  width: 50%;
+  min-width: 600px;
 }
