@@ -10,14 +10,9 @@ class Home extends Component{
         <p>
           I am going to make a website in React hosted
           on github pages using the npm module gh-pages.
-          If you are a recruiter linked here from my CV,
-          this page should be interpreted as "hm, this dude
-          totally tries to make cool new technology work, instead of
-          making a boring old website! He has the spirit to learn
-          and the will of and ox!".
-          Or something like that. Anyway, in a few weeks time
-          (I'm a busy man!) there should be a website up and running.
-          Until then, this is all you get sadly.
+        </p>
+        <p>
+          <b>Fornøyd no Maria?</b>
         </p>
       </div>
     )
