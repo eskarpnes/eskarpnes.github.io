@@ -91,8 +91,7 @@ class About extends Component {
           <li>
             <a href="https://www.ethereum.org/">Ethereum</a> and the Ethereum Virtual Machine, and other ERC-20 tokens.
             Did you know that Ethereum is currently valued at ${this.state.ethData['price']}? This is
-            a {change}% {change >= 0 ? 'increase' : 'decrease'} in the last seven days.
-            (data from <a href="https://coinmarketcap.com/currencies/ethereum/">Coinmarketcap</a>).
+            a {change}% {change >= 0 ? 'increase' : 'decrease'} in the last seven days.*
             I am amazed at the possibility of an trustless decentralized future for the web. I use much of my free time
             researching the different aspects of Ethereum, and how I can use it in my projects. I intend to teach
             myself Solidity, the language used to make smart contracts for the Ethereum network.
@@ -114,7 +113,7 @@ class About extends Component {
           <li>
             Powerlifting. I love lifting heavy things up and put them down
             again. I find trying to break personal records on squats, deadlifts, and bench a fantastic way of staying
-            in shape. I'm just now (as of january 2018) starting from scratch after half a year without lifting
+            in shape. I'm just now** starting from scratch after half a year without lifting
             because of health issues, so I'll keep you all posted on my progress.
           </li>
           <li>
@@ -134,6 +133,15 @@ class About extends Component {
         </ul>
         This concludes the information about me. Down below you will find further information about projects I am/have
         been involved in. Have a {this.greetings[moment().format('dddd')]} {moment().format('dddd').toLowerCase()}!
+
+        <ul>
+          <li>
+            *data from <a href="https://coinmarketcap.com/currencies/ethereum/">coinmarketcap.com</a>
+          </li>
+          <li>
+            **as of january 2018
+          </li>
+        </ul>
       </div>
     )
   }
