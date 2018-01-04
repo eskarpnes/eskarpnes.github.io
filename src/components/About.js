@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import moment from "moment";
+import axios from "axios";
 
 class About extends Component {
 
@@ -13,24 +14,48 @@ class About extends Component {
       'Wednesday': 'wonderful',
       'Thursday': 'tremendous',
       'Friday': 'fantastic',
-      'Saturday': 'sweet',
+      'Saturday': 'super',
       'Sunday': 'sweet'
     };
     this.state = {
       ageInSeconds: presentTime.diff(birthTime, 'seconds'),
-      age: presentTime.diff(birthTime, 'years')
+      age: presentTime.diff(birthTime, 'years'),
+      ethData: {
+        'price': '<api-request failed>',
+        'change': '<api-request failed>'
+      }
     };
   }
 
 
   tick() {
+    if (this.state.ageInSeconds%30 === 0) {
+      console.log("updating price");
+      this.getEthPrice()
+    }
     this.setState(prevState => ({
       ageInSeconds: prevState.ageInSeconds + 1
     }));
   }
 
+  getEthPrice() {
+    axios.get('https://api.coinmarketcap.com/v1/ticker/ethereum/')
+      .then(res => {
+        let ethData = res.data[0];
+        this.setEthData(ethData)
+      })
+  }
+
+  setEthData(ethData) {
+    this.setState({ ethData: { 'price': ethData['price_usd'], 'change': ethData['percent_change_7d'] } })
+  }
+
   componentDidMount() {
-    this.interval = setInterval(() => this.tick(), 1000)
+    this.interval = setInterval(() => this.tick(), 1000);
+  }
+
+  componentWillMount() {
+    this.getEthPrice()
   }
 
   componentWillUnmount() {
@@ -38,12 +63,14 @@ class About extends Component {
   }
 
   render() {
+    let change = this.state.ethData['change'];
 
     return (
       <div className="about">
         <h3>About me</h3>
         <p>
-          I'm a {this.state.age} year (or approximately {this.state.ageInSeconds} seconds) old programmer currently studying at NTNU.
+          I'm a {this.state.age} year (or approximately {this.state.ageInSeconds} seconds) old programmer from
+          Ålesund currently studying at NTNU.
           This site is made as a quick look into both my personal and professional life, and my ongoing and completed
           projects.
         </p>
@@ -63,6 +90,9 @@ class About extends Component {
         <ul>
           <li>
             <a href="https://www.ethereum.org/">Ethereum</a> and the Ethereum Virtual Machine, and other ERC-20 tokens.
+            Did you know that Ethereum is currently valued at ${this.state.ethData['price']}? This is
+            a {change}% {change >= 0 ? 'increase' : 'decrease'} in the last seven days.
+            (data from <a href="https://coinmarketcap.com/currencies/ethereum/">Coinmarketcap</a>).
             I am amazed at the possibility of an trustless decentralized future for the web. I use much of my free time
             researching the different aspects of Ethereum, and how I can use it in my projects. I intend to teach
             myself Solidity, the language used to make smart contracts for the Ethereum network.
@@ -93,9 +123,13 @@ class About extends Component {
           </li>
           <li>
             Motorcycles. Not much can beat the feeling of a few hundred horses between your legs. Sadly, living as a
-            student does not leave the possibility of owning a motorcycle, as the money is tight. So, for the moment
+            student does not leave the possibility of owning a motorcycle, as the money is tight. So, for the time
             being, I'm motorcycleless. That does however not crush my dream of driving through Europe one day on my
             motorcycle, cruising through the Italian vineyards and German autobahn.
+          </li>
+          <li>
+            I also spend way too much time on <a href="www.reddit.com">reddit</a>. I view it as an interesting way
+            to be exposed to new information and viewpoints, with the cute cat picture every now and then.
           </li>
         </ul>
         This concludes the information about me. Down below you will find further information about projects I am/have
