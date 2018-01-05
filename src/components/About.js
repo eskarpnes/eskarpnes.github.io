@@ -68,7 +68,11 @@ class About extends Component {
     return (
       <div className="about">
         <h1>Erlend Skarpnes</h1>
-        <h3>SITE IS WORK IN PROGRESS! :)</h3>
+        <h3>Site is still a work in progress.</h3>
+        <p>
+          If you are a recruiter, please note that I am not a designer! I am going to try to make the site look a whole
+          lot prettier, as well as filling in the lorem ipsum text about projects.
+        </p>
         <div className="section">
           <div className="text">
             <h2>About me</h2>
@@ -79,7 +83,9 @@ class About extends Component {
           projects.
             </p>
             <h3>Languages/Frameworks</h3>
-        In no particular order.
+            <p>
+              In no particular order.
+            </p>
             <ul>
               <li>Python</li>
               <li>Java</li>
@@ -97,7 +103,9 @@ class About extends Component {
         <div className="section">
           <div className="text">
             <h3>Interests</h3>
-        Related to IT.
+            <p>
+              Related to IT.
+            </p>
             <ul>
               <li>
                 <a href="https://www.ethereum.org/">Ethereum</a> and the Ethereum Virtual Machine, and other ERC-20 tokens.
@@ -149,8 +157,10 @@ class About extends Component {
             to be exposed to new information and viewpoints, with the cute cat picture every now and then.
               </li>
             </ul>
-        This concludes the information about me. Down below you will find further information about projects I am/have
-        been involved in. Have a {this.greetings[moment().format('dddd')]} {moment().format('dddd').toLowerCase()}!
+            <p>
+              This concludes the information about me. Down below you will find further information about projects I am/have
+              been involved in. Have a {this.greetings[moment().format('dddd')]} {moment().format('dddd').toLowerCase()}!
+            </p>
             <ul id="footnote">
               <li>
             *data from <a href="https://coinmarketcap.com/currencies/ethereum/">coinmarketcap.com</a>
