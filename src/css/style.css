@@ -1,6 +1,24 @@
 body {
   background-color: white;
   color: black;
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h1 h2 h3 {
+  font-family: '', serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 #root {
@@ -9,6 +27,67 @@ body {
 }
 
 #home {
-  width: 50%;
+  width: 80%;
   min-width: 600px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.about .section {
+  display: flex;
+  flex-direction: row;
+}
+
+.about .picture {
+  max-width: 50%;
+  overflow: hidden;
+}
+
+.about .picture img {
+  align-self: center;
+  max-width: 1000px;
+  height: auto;
+  margin: 5px;
+}
+
+.about .text {
+  width: 50%;
+  padding: 1em;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.project .picture {
+  overflow: hidden;
+  justify-content: center;
+}
+
+.project .picture img {
+  max-width: 100%;
+  margin: 5px;
+}
+
+#pimp {
+  flex-direction: row;
+}
+
+#pimp .text {
+  max-width: 50%;
+}
+
+#pimp .picture {
+  max-width: 50%;
+}
+
+#footnote {
+  font-size: 0.8em;
+  list-style: none;
+  padding-left: 0;
 }

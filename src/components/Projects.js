@@ -6,9 +6,10 @@ class Projects extends Component {
   render() {
     return (
       <div>
-        <h3>Projects</h3>
+        <h2>Projects</h2>
         {projectData.map(function(data, i){
           return <Project
+            id={data.id}
             title={data.title}
             paragraphs={data.paragraphs}
             imgSrc={data.img}
