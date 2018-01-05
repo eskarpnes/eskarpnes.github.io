@@ -145,7 +145,7 @@ class About extends Component {
             motorcycle, cruising through the Italian vineyards and German autobahn.
               </li>
               <li>
-            I also spend way too much time on <a href="www.reddit.com">reddit</a>. I view it as an interesting way
+            I also spend way too much time on <a href="https://www.reddit.com/">reddit</a>. I view it as an interesting way
             to be exposed to new information and viewpoints, with the cute cat picture every now and then.
               </li>
             </ul>
