@@ -8,7 +8,15 @@ class Projects extends Component {
       <div>
         <h3>Projects</h3>
         {projectData.map(function(data, i){
-          return <Project title={data.title} paragraphs={data.paragraphs} imgSrc={data.img} link={data.link} key={i}/>
+          return <Project
+            title={data.title}
+            paragraphs={data.paragraphs}
+            imgSrc={data.img}
+            imgAlt={data.imgAlt}
+            link={data.link}
+            linkText={data.linkText}
+            key={i}
+          />
         })}
       </div>
     )
