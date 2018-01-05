@@ -68,6 +68,7 @@ class About extends Component {
     return (
       <div className="about">
         <h1>Erlend Skarpnes</h1>
+        <h3>SITE IS WORK IN PROGRESS! :)</h3>
         <div className="section">
           <div className="text">
             <h2>About me</h2>
