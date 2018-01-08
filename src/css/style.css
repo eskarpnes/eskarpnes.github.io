@@ -53,10 +53,6 @@ body {
   top: 0;
 }
 
-.header .item {
-
-}
-
 .about {
   display: flex;
   flex-direction: column;
@@ -69,21 +65,17 @@ body {
   margin: 10em 0 10em 0;
 }
 
-.about .picture {
-  max-width: 50%;
-  overflow: hidden;
-}
-
 .about .picture img {
-  align-self: center;
-  max-width: 1000px;
-  height: auto;
   margin: 5px;
 }
 
 .about .text {
   width: 50%;
   max-width: 800px;
+}
+
+.about .text ul {
+  list-style: circle;
 }
 
 .about .text li {
@@ -126,4 +118,17 @@ body {
   font-size: 0.8em;
   list-style: none;
   padding-left: 0;
+}
+
+@media screen and (max-width: 1200px) {
+
+  .about .section {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .about .text {
+    width: auto;
+    max-width: 100%;
+  }
 }

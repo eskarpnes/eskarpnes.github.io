@@ -68,7 +68,6 @@ class About extends Component {
     return (
       <div className="about">
         <a name="about"/>
-        <h3>Site is still a work in progress.</h3>
         <div className="section">
           <div className="text">
             <h2>About me</h2>
@@ -114,6 +113,11 @@ class About extends Component {
             Arduino.
               </li>
             </ul>
+            <ul id="footnote">
+              <li>
+                *data from <a href="https://coinmarketcap.com/currencies/ethereum/">coinmarketcap.com</a>
+              </li>
+            </ul>
           </div>
           <div className="picture">
             <img src="/img/mountain1.jpg" alt="on top of Skopphornet" />
@@ -143,11 +147,6 @@ class About extends Component {
               This concludes the information about me. Down below you will find further information about projects I am/have
               been involved in. Have a {this.greetings[moment().format('dddd')]} {moment().format('dddd').toLowerCase()}!
             </p>
-            <ul id="footnote">
-              <li>
-            *data from <a href="https://coinmarketcap.com/currencies/ethereum/">coinmarketcap.com</a>
-              </li>
-            </ul>
           </div>
           <div className="picture">
             <img src="/img/mountain2.jpg" alt="sign reading 'Skopphornet 1226 moh'" />
