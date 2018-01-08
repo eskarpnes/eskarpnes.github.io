@@ -127,8 +127,14 @@ body {
     justify-content: center;
   }
 
+  .about .picture {
+    display: flex;
+    justify-content: center;
+  }
+
   .about .text {
     width: auto;
     max-width: 100%;
+    text-align: center;
   }
 }
