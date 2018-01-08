@@ -1,10 +1,10 @@
 p, ul, a {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 h2 {
@@ -39,6 +39,24 @@ body {
   max-width: 1400px;
 }
 
+.header-wrapper {
+  width: 100%;
+}
+
+.header {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  top: 0;
+}
+
+.header .item {
+
+}
+
 .about {
   display: flex;
   flex-direction: column;
@@ -47,6 +65,8 @@ body {
 .about .section {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  margin: 10em 0 10em 0;
 }
 
 .about .picture {
@@ -63,14 +83,18 @@ body {
 
 .about .text {
   width: 50%;
-  padding: 1em;
   max-width: 800px;
+}
+
+.about .text li {
+  margin: 1em 0 1em 0;
 }
 
 .project {
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
+  justify-content: space-around;
+  margin: 1em 0 9em 0;
 }
 
 .project .picture {
@@ -80,7 +104,6 @@ body {
 
 .project .picture img {
   max-width: 100%;
-  margin: 5px;
 }
 
 #pimp {
@@ -92,7 +115,7 @@ body {
 }
 
 #pimp .picture {
-  width: 50%;
+  max-width: 50%;
 }
 
 #pimp .picture img {
