@@ -6,7 +6,6 @@ class Projects extends Component {
   render() {
     return (
       <div className="projects">
-        <a name="projects"/>
         <h2>Projects</h2>
         {projectData.map(function(data, i){
           return <Project

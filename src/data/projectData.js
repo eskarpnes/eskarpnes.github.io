@@ -8,8 +8,8 @@ let projectData = [
     ],
     img: 'defendy_pengy.png',
     imgAlt: 'defendy pengy banner',
-    link: '#',
-    linkText: 'Github not available before late february, sorry!'
+    link: 'https://github.com/hackerspace-ntnu/Defendy-Pengy',
+    linkText: 'Github'
   },
   {
     id: 'pimp',
